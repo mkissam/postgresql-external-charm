@@ -1,0 +1,18 @@
+name: postgresql-external
+summary: Configure external PostgreSQL database
+maintainer: Marton Kiss <marton.kiss@canonical.com>
+description: |
+  This charm will provide a connection to an already deployed external
+  postgresql database instance.
+tags:
+  - databases
+series:
+  - xenial
+subordinate: true
+provides:
+  db:
+    interface: pgsql
+    optional: true
+  db-admin:
+    interface: pgsql
+    optional: true
